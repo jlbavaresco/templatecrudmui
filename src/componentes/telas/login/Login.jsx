@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
-import Alerta from '../comuns/Alerta';
-import Carregando from '../comuns/Carregando';
+import Alerta from '../../comuns/Alerta';
+import Carregando from '../../comuns/Carregando';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';

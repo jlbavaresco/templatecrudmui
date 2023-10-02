@@ -7,8 +7,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MenuPrincipal from './componentes/MenuPrincipal';
 import Sobre from './componentes/Sobre';
 import NotFound from './componentes/NotFound';
-import Home from './componentes/Home';
-import Login from './componentes/login/Login';
+import Home from './componentes/telas/home/Home';
+import Login from './componentes/telas/login/Login';
+import Posts from './componentes/telas/posts/Posts';
 
 
 const router = createBrowserRouter([
@@ -27,7 +28,11 @@ const router = createBrowserRouter([
       {
         path: "Login",
         element: <Login />,
-      },      
+      },     
+      {
+        path: "posts",
+        element: <Posts />,
+      },       
       {
         path: "*",
         element: <NotFound />,
