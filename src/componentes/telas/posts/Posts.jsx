@@ -40,10 +40,10 @@ function Posts() {
     }
 
     const editarObjeto = async (objeto) => {
-            setObjeto(objeto);
-            setAbreDialogo(true);
-            setEditar(true);
-            setAlerta({ status: "", message: "" });
+        setObjeto(objeto);
+        setAbreDialogo(true);
+        setEditar(true);
+        setAlerta({ status: "", message: "" });
     }
 
     const acaoCadastrar = async e => {
@@ -57,7 +57,7 @@ function Posts() {
                 setAlerta({ status: "error", message: "Erro ao atualizar o POST:" + err });
             }
         } else { // novo 
-            try {               
+            try {
                 setEditar(true);
                 setAlerta({ status: "success", message: "Post criado com sucesso" });
             } catch (err) {
@@ -73,16 +73,13 @@ function Posts() {
     }
 
     const remover = async (objeto) => {
-        if (window.confirm('Deseja remover este objeto?')) {
-            if (window.confirm("Remover este objeto?")) {      
-                try {
-                    setAlerta({ status: "success", message: "Post removido com sucesso!" });
-                } catch (err) {
-                    setAlerta({ status: "error", message: "Erro ao  remover: " + err });
-                }
+        if (window.confirm("Remover este objeto?")) {
+            try {
+                setAlerta({ status: "success", message: "Post removido com sucesso!" });
+            } catch (err) {
+                setAlerta({ status: "error", message: "Erro ao  remover: " + err });
             }
         }
-
     }
 
     useEffect(() => {
